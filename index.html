@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BookNest Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="login">
+  <div class="hero">
+    <div class="logo"><b>S</b> BookNest Library</div>
+    <div>
+      <h1>Every computer and engineering title, one desk.</h1>
+      <p>Admins run the desk. Students browse the catalogue and track their own loans and fines.</p>
+    </div>
+    <div class="shelf" id="shelf" aria-hidden="true"></div>
+  </div>
+  <div class="loginbox">
+    <div class="card">
+      <h2>Sign in</h2>
+      <div class="seg" id="seg"><button type="button" data-role="admin" aria-pressed="true">Admin</button><button type="button" data-role="student" aria-pressed="false">Student</button></div>
+      <form id="f-login">
+        <label id="ulabel">Username<input name="u" autocomplete="username" required></label>
+        <label>Password<input name="p" type="password" autocomplete="current-password" required></label>
+        <div class="err" id="err" role="alert"></div>
+        <button class="btn">Sign in</button>
+      </form>
+      <div class="hint" id="hint"></div>
+    </div>
+  </div>
+</section>
+
+<div id="app" hidden>
+  <header>
+    <div class="top">
+      <div class="logo"><b>S</b> BookNest Library</div>
+      <div class="who"><span id="who"></span><button class="btn ghost" id="logout">Sign out</button></div>
+    </div>
+    <nav role="tablist" id="nav"></nav>
+  </header>
+  <main id="view"></main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
